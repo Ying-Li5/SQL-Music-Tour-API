@@ -15,6 +15,18 @@ app.get('/', (req, res) => {
     })
 })
 
+app.get('/events', (req, res) => {
+    res.status(200).json({
+        message: 'Welcome to the Tour API Events Listing'
+    })
+})
+
+app.get('/stages', (req, res) => {
+    res.status(200).json({
+        message: 'Welcome to the Tour API Stages Listing'
+    })
+})
+
 // LISTEN
 app.listen(process.env.PORT, () => {
     console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
